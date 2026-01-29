@@ -1083,4 +1083,122 @@ body {
         min-height: calc(100vh - 120px);
     }
 }
+/* Mobile - Ajustar solo recuadros para que entren en pantalla */
+@media (max-width: 768px) {
+    /* SERVICIOS - Recuadros más compactos */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 10px; /* Menos padding lateral */
+    }
+    
+    .service-card {
+        padding: 20px 15px; /* Menos padding interno */
+        min-height: auto; /* Altura automática */
+        border: 2px solid var(--white); /* Borde más fino */
+    }
+    
+    /* CONTACTO - Recuadros proporcionados */
+    .contact-grid {
+        gap: 20px;
+        padding: 0 10px; /* Menos padding lateral */
+    }
+    
+    .contact-form {
+        padding: 20px 15px; /* Menos padding interno */
+        border: 2px solid var(--white); /* Borde más fino */
+    }
+    
+    .contact-info {
+        padding: 20px 15px; /* Menos padding interno */
+    }
+    
+    /* CASOS - Recuadros proporcionados */
+    .cases-grid {
+        gap: 20px;
+        padding: 0 10px; /* Menos padding lateral */
+    }
+    
+    .case-card {
+        padding: 20px 15px; /* Menos padding interno */
+        border: 2px solid var(--white); /* Borde más fino */
+    }
+    
+    /* Contenedor general - Menos padding */
+    .container {
+        padding: 20px 10px; /* Reduce padding lateral */
+    }
+    
+    /* Asegurar que los bordes se vean completos */
+    .section {
+        padding: 30px 0; /* Reduce padding vertical */
+        overflow-x: hidden; /* Evita cortes de borde */
+    }
+}/* Mobile - Ajustes específicos para CONTACTO */
+@media (max-width: 768px) {
+    /* Grid de contacto más compacto */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 15px; /* Reduce espacio entre elementos */
+        padding: 0 5px; /* Mínimo padding lateral */
+    }
+    
+    /* Formulario más compacto */
+    .contact-form {
+        padding: 15px 10px; /* Mínimo padding interno */
+        border: 2px solid var(--white); /* Borde más fino */
+    }
+    
+    /* Campos del formulario más pequeños */
+    .form-group {
+        margin-bottom: 15px; /* Menos espacio entre campos */
+    }
+    
+    .form-group label {
+        font-size: 1rem; /* Texto más pequeño */
+        margin-bottom: 5px;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 10px 8px; /* Menos padding en campos */
+        font-size: 0.9rem; /* Texto más pequeño */
+    }
+    
+    /* Botón submit más compacto */
+    .btn-submit {
+        padding: 15px 10px; /* Menos padding */
+        font-size: 1.1rem; /* Texto más pequeño */
+    }
+    
+    /* Info de contacto más compacta */
+    .contact-info {
+        padding: 15px 10px; /* Mínimo padding */
+    }
+    
+    /* Métodos de contacto más pequeños */
+    .contact-method {
+        padding: 15px 10px; /* Menos padding */
+        gap: 10px; /* Menos espacio entre elementos */
+    }
+    
+    .method-icon {
+        font-size: 1.5rem; /* Icono más pequeño */
+    }
+    
+    .method-name {
+        font-size: 1.1rem; /* Texto más pequeño */
+    }
+    
+    .method-desc {
+        font-size: 0.8rem; /* Texto más pequeño */
+    }
+    
+    /* Links sociales más compactos */
+    .social-link {
+        padding: 15px 10px; /* Menos padding */
+        font-size: 1rem; /* Texto más pequeño */
+        gap: 10px; /* Menos espacio */
+    }
+}
 
