@@ -109,14 +109,46 @@ function initForm() {
         submitBtn.querySelector('span').textContent = 'ENVIANDO...';
         submitBtn.disabled = true;
         
-        // Simular envío
-        setTimeout(() => {
-            alert('✅ DIAGNÓSTICO ENVIADO\nTe contactaremos en menos de 24h.');
-            form.reset();
-            submitBtn.querySelector('span').textContent = originalText;
-            submitBtn.disabled = false;
-        }, 2000);
+        form.addEventListener('submit', async function(e) { // <-- Agregamos 'async' aquí
+            e.preventDefault();
+            
+            const submitBtn = form.querySelector('.btn-submit');
+            const spanText = submitBtn.querySelector('span');
+            const originalText = spanText.textContent;
+            
+            // Mostrar loading
+            spanText.textContent = 'ENVIANDO...';
+            submitBtn.disabled = true;
+            
+            // Capturar los datos de los campos del formulario
+            const formData = new FormData(form);
+            const datos = Object.fromEntries(formData.entries());
+    
+            try {
+                // CONEXIÓN REAL: Enviamos los datos a n8n
+                const response = await fetch("https://peninsula-acre-designs-brother.trycloudflare.com/webhook-test/contacto-web", {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(datos)
+                });
+    
+                if (response.ok) {
+                    alert('✅ DIAGNÓSTICO ENVIADO\nTe contactaremos en menos de 24h.');
+                    form.reset();
+                } else {
+                    alert('❌ Error en el servidor. Intenta de nuevo.');
+                }
+            } catch (error) {
+                console.error("Error de conexión:", error);
+                alert('❌ No se pudo conectar con el servidor. ¿Está el túnel abierto?');
+            } finally {
+                // Restaurar botón al estado original
+                spanText.textContent = originalText;
+                submitBtn.disabled = false;
+            }
+        });
     });
+    
 }
 
 // Efectos de scroll
