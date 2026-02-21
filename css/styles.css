@@ -107,14 +107,13 @@ body {
 
 /* ===== SCROLL CONTINUO ===== */
 .scroll-container {
-    scroll-snap-type: y mandatory;
-    height: 100vh;
-    overflow-y: scroll;
+    
+    height: auto;
+    overflow-y: auto;
 }
 
 .section {
-    min-height: 100vh;
-    scroll-snap-align: start;
+    min-height: 100vh;    
     border-bottom: 3px solid var(--white);
     padding-top: 80px;
 }
@@ -125,13 +124,8 @@ body {
     padding: 40px 20px;
 }
 
-/* ===== SECCIÓN INICIO ===== */
-.hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: start;
-}
+
+
 
 .title-glitch {
     font-family: var(--font-term);
@@ -773,7 +767,7 @@ body {
 
     /* Ocultar logo */
     .logo {
-      display: none;
+        display: none !important; 
     }
   
     /* Hero en columna */
@@ -1004,11 +998,7 @@ body {
         padding: 5px 12px;
     }
 }
-/* Ocultar subtítulo en móvil */
-@media (mix-width: 769px) {
-    .subtitle {
-        display: none;
-    }}
+
 
 /* Títulos principales (H1) */
 .title-glitch {
@@ -1199,6 +1189,77 @@ body {
         padding: 15px 10px; /* Menos padding */
         font-size: 1rem; /* Texto más pequeño */
         gap: 10px; /* Menos espacio */
+    }
+}
+/* ===== MENÚ HAMBURGUESA ===== */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--white);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    top: 8px;
+}
+
+/* Estado activo (X) */
+.menu-toggle.active .hamburger {
+    background: transparent;
+}
+
+.menu-toggle.active .hamburger::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.menu-toggle.active .hamburger::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 20px 0;
+        background: var(--blue);
+        border-top: 2px solid var(--white);
+        margin-top: 10px;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    /* Ajustar nav-container para móvil */
+    .nav-container {
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 }
 
