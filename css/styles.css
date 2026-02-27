@@ -7,10 +7,10 @@
     --gray: #eee8e8;
     --dark: #111;
     --blue: #0a0d28;
-    
-    
-        --font-mono: 'Space Mono', monospace;
-        --font-term: 'Roboto Mono', monospace;
+
+
+    --font-mono: 'Space Mono', monospace;
+    --font-term: 'Roboto Mono', monospace;
 }
 
 * {
@@ -21,6 +21,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -29,6 +30,7 @@ body {
     color: var(--gray);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
 }
 
 /* ===== NAVEGACIÓN ===== */
@@ -101,19 +103,26 @@ body {
 }
 
 @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
 }
 
 /* ===== SCROLL CONTINUO ===== */
 .scroll-container {
-    
+
     height: auto;
     overflow-y: auto;
 }
 
 .section {
-    min-height: 100vh;    
+    min-height: 100vh;
     border-bottom: 3px solid var(--white);
     padding-top: 80px;
 }
@@ -134,7 +143,8 @@ body {
     margin-bottom: 20px;
 }
 
-.line1, .line2 {
+.line1,
+.line2 {
     display: block;
 }
 
@@ -198,9 +208,17 @@ body {
     border-radius: 50%;
 }
 
-.dot.red { background: #ff5f56; }
-.dot.yellow { background: #ffbd2e; }
-.dot.green { background: #27ca3f; }
+.dot.red {
+    background: #ff5f56;
+}
+
+.dot.yellow {
+    background: #ffbd2e;
+}
+
+.dot.green {
+    background: #27ca3f;
+}
 
 .term-title {
     color: var(--green);
@@ -240,8 +258,15 @@ body {
 }
 
 @keyframes blink {
-    0%, 100% { border-color: var(--green); }
-    50% { border-color: transparent; }
+
+    0%,
+    100% {
+        border-color: var(--green);
+    }
+
+    50% {
+        border-color: transparent;
+    }
 }
 
 /* ===== SECCIÓN SERVICIOS ===== */
@@ -400,7 +425,7 @@ body {
     font-family: var(--font-term);
 }
 
-.case-body > div {
+.case-body>div {
     margin-bottom: 20px;
 }
 
@@ -634,284 +659,59 @@ body {
     font-size: 1.5rem;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 992px) {
-    .hero {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-}
 
-@media (max-width: 768px) {
-    .navbar {
-        padding: 10px 0;
-    }
-    
-    .nav-container {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .nav-menu {
-        gap: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    .title-glitch {
-        font-size: 2.5rem;
-    }
-    
-    .services-grid,
-    .cases-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .section-title {
-        font-size: 2.2rem;
-    }
-    
-    .whatsapp-float {
-        bottom: 20px;
-        right: 20px;
-        padding: 10px 15px;
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 20px 15px;
-    }
-    
-    .section {
-        padding-top: 120px;
-    }
-    
-    .title-glitch {
-        font-size: 2rem;
-    }
-    
-    .btn-primary {
-        padding: 15px 25px;
-        font-size: 1.2rem;
-    }
-    
-    .term-line {
-        font-size: 0.9rem;
-    }
-}    
 /* ===== LOGO ===== */
 .logo img {
     height: 72px;
     width: auto;
     display: block;
-  }
-  /* ===== MOCKUP MOBILE: OCULTO EN DESKTOP ===== */
+}
+
+/* ===== MOCKUP MOBILE: OCULTO EN DESKTOP ===== */
 .mockup-mobile {
     display: none;
-  }
-  
-  
-  @media (max-width: 768px) {
-    .logo img {
-      height: 52px;
-    }
-  }
-  
-  
-  /* ===== HERO BASE (DESKTOP) ===== */
+}
+
+/* ===== HERO BASE (DESKTOP) ===== */
 .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 60px;
     min-height: calc(100vh - 80px);
-  }
-  
-  .hero-text {
+}
+
+.hero-text {
     flex: 1;
-  }
-  
-  .hero-mockup {
+}
+
+.hero-mockup {
     flex: 1;
     display: flex;
     justify-content: center;
-  }
-  
-  /* Mockup celular */
-  .phone-frame {
+}
+
+/* Mockup celular */
+.phone-frame {
     width: 260px;
-    
     background: none;
     padding: 0;
-    box-shadow: 0 30px 60px rgba(0,0,0,.45);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, .45);
     display: flex;
     justify-content: center;
-  }
-  
-  .phone-frame img {
+}
+
+.phone-frame img {
     width: 100%;
     height: auto;
     object-fit: contain;
-  }
-  @media (max-width: 768px) {
+}
 
-    /* Ocultar logo */
-    .logo {
-        display: none !important; 
-    }
-  
-    /* Hero en columna */
-    .hero {
-      flex-direction: column;
-      text-align: center;
-      gap: 32px;
-      min-height: auto;
-      padding: 40px 0 60px;
-    }
-  
-    .hero-text {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .hero-text .btn-primary {
-      margin-bottom: 32px;
-    }
-  
-    /* Ocultar mockup vertical */
-    .hero-mockup,
-    .phone-frame {
-      display: none;
-    }
-  
-    /* Mostrar imagen comercial */
-    .mockup-mobile {
-      display: block;
-      width: 100%;
-      max-width: 360px;
-      margin: 0 auto;
-      
-    }
-  
-    .mockup-mobile img {
-      width: 100%;
-      height: auto;
-      border-radius: 16px;
-      box-shadow: 0 20px 40px rgba(0,0,0,.35);
-    }
-  }
-  @media (max-width: 768px) {
-    .hero {
-      flex-direction: column;
-      text-align: center;
-      gap: 24px;
-      padding: 40px 0 60px;
-      min-height: auto;
-    }
-  
-    .hero-text {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      order: 2; /* texto debajo */
-    }
-  
-    .hero-mockup,
-    .phone-frame {
-      display: none; /* oculta mockup desktop */
-    }
-  
-    .mockup-mobile {
-      display: block;
-      order: 1; /* imagen arriba */
-      width: 100%;
-      max-width: 360px;
-      margin: 0 auto;
-    }
-  
-    .mockup-mobile img {
-      width: 100%;
-      height: auto;
-      border-radius: 16px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
-    }
-  }@media (max-width: 768px) {
-    .hero {
-      flex-direction: column;
-      text-align: center;
-      gap: 16px;               /* reduce espacio entre bloques */
-      padding: 20px 0 40px;    /* menos padding superior */
-      min-height: auto;
-    }
-  
-    .mockup-mobile {
-      display: block;
-      order: 1;                /* imagen primero */
-      width: 100%;
-      max-width: 320px;        /* ligeramente más pequeña para subir */
-      margin: 0 auto 10px;     /* margen superior reducido */
-    }
-  
-    .mockup-mobile img {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;     /* bordes más pequeños = sube visualmente */
-      box-shadow: 0 15px 30px rgba(0,0,0,.3);
-    }
-  
-    .hero-text {
-      order: 2;                /* texto después */
-      margin-top: 0;           /* elimina margen superior */
-    }
-  }/* ===== FOOTER: logo imagen, sin texto “RAW UX” en responsive ===== */
-@media (max-width: 768px) {
-    .footer-logo {
-      display: none; /* oculta texto “RAW UX” */
-    }
-  
-    .footer-brand {
-      display: block; /* muestra contenedor de imagen */
-    }
-  
-    .footer-logo-img {
-      height: 48px; /* mismo tamaño que navbar */
-      width: auto;
-      display: block;
-      margin: 0 auto; /* centrado */
-    }
-  }/* ===== FOOTER: logo más pequeño en responsive ===== */
-@media (max-width: 768px) {
-    .footer-logo-img {
-      height: 36px;   /* más pequeño que navbar (52 px) */
-      width: auto;
-      display: block;
-      margin: 0 auto; /* centrado */
-    }
-  }/* ===== FOOTER: sin logo en desktop ===== */
-@media (min-width: 769px) {
-  .footer-logo-img {
-    display: none; /* oculta imagen en desktop */
-  }
-
-  .footer-brand {
-    display: block; /* mantiene contenedor por si acaso */
-  }
-}/* ===== H2 más pequeño que H1 (forzado) ===== */
+/* ===== TÍTULOS (Sobreescrituras) ===== */
 .title-glitch {
     font-size: 4rem;
     line-height: 1.1;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .line1,
@@ -921,12 +721,17 @@ body {
 
 .line2 {
     color: var(--green);
-    font-size: 3.2rem;   /* ← más pequeño que H1 */
+    font-size: 3.2rem;
     margin-top: 8px;
 }
 
-/* ===== SECCIÓN CASOS ===== */
+.section-title {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
 
+/* ===== SECCIÓN CASOS ===== */
 .cases-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -959,7 +764,6 @@ body {
     display: block;
 }
 
-/* BADGE ACHICADO */
 .case-badge {
     position: absolute;
     top: 10px;
@@ -983,214 +787,6 @@ body {
     color: var(--black);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .cases-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .case-image-wrap {
-        aspect-ratio: 4/3;
-    }
-    
-    .case-badge {
-        font-size: 0.8rem;
-        padding: 5px 12px;
-    }
-}
-
-
-/* Títulos principales (H1) */
-.title-glitch {
-    font-size: 3rem;
-    line-height: 1.1;
-    margin-bottom: 30px;
-}
-
-/* Línea 2 del título principal */
-.line2 {
-    font-size: 2rem;
-    color: var(--green);
-    margin-top: 5px;
-    display: block;
-}
-
-/* Subtítulos de sección (H2) */
-.section-title {
-    font-size: 1.6rem;
-    line-height: 1.6;
-    margin-bottom: 40px;
-}
-/* Mobile se mantiene como está */
-@media (max-width: 768px) {
-    .subtitle {
-        display: none;
-    }
-
-
-    .title-glitch {
-        font-size: 2rem;
-    }
-    
-    .line2 {
-        font-size: 1.6rem;
-    }
-    
-    .subtitle {
-        font-size: 1rem;
-    }
-}
-/* Desktop - mantiene el offset actual */
-@media (min-width: 769px) {
-    html {
-        scroll-padding-top: 80px;
-    }
-    
-    .section {
-        scroll-margin-top: 80px;
-    }
-}
-
-/* Mobile - sin offset pero con espacio compensado */
-@media (max-width: 768px) {
-    /* Quitamos el offset que causa el problema */
-    html {
-        scroll-padding-top: 0;
-    }
-    
-    .section {
-        scroll-margin-top: 0;
-    }
-    
-    /* Compensamos con padding extra */
-    #inicio {
-        padding-top: 120px; /* Espacio para el header */
-    }
-    
-    /* Aseguramos que el hero tenga espacio */
-    .hero {
-        padding-top: 40px;
-        min-height: calc(100vh - 120px);
-    }
-}
-/* Mobile - Ajustar solo recuadros para que entren en pantalla */
-@media (max-width: 768px) {
-    /* SERVICIOS - Recuadros más compactos */
-    .services-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 0 10px; /* Menos padding lateral */
-    }
-    
-    .service-card {
-        padding: 20px 15px; /* Menos padding interno */
-        min-height: auto; /* Altura automática */
-        border: 2px solid var(--white); /* Borde más fino */
-    }
-    
-    /* CONTACTO - Recuadros proporcionados */
-    .contact-grid {
-        gap: 20px;
-        padding: 0 10px; /* Menos padding lateral */
-    }
-    
-    .contact-form {
-        padding: 20px 15px; /* Menos padding interno */
-        border: 2px solid var(--white); /* Borde más fino */
-    }
-    
-    .contact-info {
-        padding: 20px 15px; /* Menos padding interno */
-    }
-    
-    /* CASOS - Recuadros proporcionados */
-    .cases-grid {
-        gap: 20px;
-        padding: 0 10px; /* Menos padding lateral */
-    }
-    
-    .case-card {
-        padding: 20px 15px; /* Menos padding interno */
-        border: 2px solid var(--white); /* Borde más fino */
-    }
-    
-    /* Contenedor general - Menos padding */
-    .container {
-        padding: 20px 10px; /* Reduce padding lateral */
-    }
-    
-    /* Asegurar que los bordes se vean completos */
-    .section {
-        padding: 30px 0; /* Reduce padding vertical */
-        overflow-x: hidden; /* Evita cortes de borde */
-    }
-}/* Mobile - Ajustes específicos para CONTACTO */
-@media (max-width: 768px) {
-    /* Grid de contacto más compacto */
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 15px; /* Reduce espacio entre elementos */
-        padding: 0 5px; /* Mínimo padding lateral */
-    }
-    
-    /* Formulario más compacto */
-    .contact-form {
-        padding: 15px 10px; /* Mínimo padding interno */
-        border: 2px solid var(--white); /* Borde más fino */
-    }
-    
-    /* Campos del formulario más pequeños */
-    .form-group {
-        margin-bottom: 15px; /* Menos espacio entre campos */
-    }
-    
-    .form-group label {
-        font-size: 1rem; /* Texto más pequeño */
-        margin-bottom: 5px;
-    }
-    
-    .form-group input,
-    .form-group textarea {
-        padding: 10px 8px; /* Menos padding en campos */
-        font-size: 0.9rem; /* Texto más pequeño */
-    }
-    
-    /* Botón submit más compacto */
-    .btn-submit {
-        padding: 15px 10px; /* Menos padding */
-        font-size: 1.1rem; /* Texto más pequeño */
-    }
-    
-    /* Info de contacto más compacta */
-    .contact-info {
-        padding: 15px 10px; /* Mínimo padding */
-    }
-    
-    /* Métodos de contacto más pequeños */
-    .contact-method {
-        padding: 15px 10px; /* Menos padding */
-        gap: 10px; /* Menos espacio entre elementos */
-    }
-    
-    .method-icon {
-        font-size: 1.5rem; /* Icono más pequeño */
-    }
-    
-    .method-name {
-        font-size: 1.1rem; /* Texto más pequeño */
-    }
-    
-    .method-desc {
-        font-size: 0.8rem; /* Texto más pequeño */
-    }
-    
-    /* Links sociales más compactos */
-    .social-link {
-        padding: 15px 10px; /* Menos padding */
-        font-size: 1rem; /* Texto más pequeño */
-        gap: 10px; /* Menos espacio */
-    }
-}
 /* ===== MENÚ HAMBURGUESA ===== */
 .menu-toggle {
     display: none;
@@ -1220,7 +816,6 @@ body {
     top: 8px;
 }
 
-/* Estado activo (X) */
 .menu-toggle.active .hamburger {
     background: transparent;
 }
@@ -1235,9 +830,46 @@ body {
     top: 0;
 }
 
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 992px) {
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 768px) {
+
+    /* Header & Nav */
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .logo img {
+        height: 52px;
+    }
+
     .menu-toggle {
         display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
     }
 
     .nav-menu {
@@ -1256,10 +888,219 @@ body {
         display: flex;
     }
 
-    /* Ajustar nav-container para móvil */
-    .nav-container {
-        flex-wrap: wrap;
-        justify-content: space-between;
+    /* Hero */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+        padding: 20px 0 40px;
+        min-height: auto;
+    }
+
+    .hero-mockup,
+    .phone-frame {
+        display: none;
+    }
+
+    .mockup-mobile {
+        display: block;
+        order: 1;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto 10px;
+    }
+
+    .mockup-mobile img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, .3);
+    }
+
+    .hero-text {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .hero-text .btn-primary {
+        margin-bottom: 32px;
+    }
+
+    /* Typography */
+    .title-glitch {
+        font-size: 2.5rem;
+    }
+
+    .line2 {
+        font-size: 1.6rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        display: none;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    /* Grids & Layouts */
+    .services-grid,
+    .cases-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .service-card,
+    .case-card,
+    .contact-form,
+    .contact-info {
+        padding: 20px 15px;
+        border: 2px solid var(--white);
+    }
+
+    .case-image-wrap {
+        aspect-ratio: 4/3;
+    }
+
+    .case-badge {
+        font-size: 0.8rem;
+        padding: 5px 12px;
+    }
+
+    /* Container Spacing */
+    .container {
+        padding: 20px 10px;
+    }
+
+    .section {
+        padding: 30px 0;
+        overflow-x: hidden;
+    }
+
+    /* Forms & Contact Details */
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px 8px;
+        font-size: 0.9rem;
+    }
+
+    .btn-submit {
+        padding: 15px 10px;
+        font-size: 1.1rem;
+    }
+
+    .contact-method {
+        padding: 15px 10px;
+        gap: 10px;
+    }
+
+    .method-icon {
+        font-size: 1.5rem;
+    }
+
+    .method-name {
+        font-size: 1.1rem;
+    }
+
+    .method-desc {
+        font-size: 0.8rem;
+    }
+
+    .social-link {
+        padding: 15px 10px;
+        font-size: 1rem;
+        gap: 10px;
+    }
+
+    /* Fix Scroll Offset */
+    html {
+        scroll-padding-top: 0;
+    }
+
+    .section {
+        scroll-margin-top: 0;
+    }
+
+    #inicio {
+        padding-top: 120px;
+    }
+
+    /* Footer */
+    .footer-logo {
+        display: none;
+    }
+
+    .footer-brand {
+        display: block;
+    }
+
+    .footer-logo-img {
+        height: 36px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* WhatsApp button */
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 15px;
+        font-size: 1rem;
     }
 }
 
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    .title-glitch {
+        font-size: 2rem;
+    }
+
+    .line2 {
+        font-size: 1.3rem;
+    }
+
+    .btn-primary {
+        padding: 15px 25px;
+        font-size: 1.2rem;
+    }
+
+    .term-line {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 769px) {
+    html {
+        scroll-padding-top: 80px;
+    }
+
+    .section {
+        scroll-margin-top: 80px;
+    }
+
+    .footer-logo-img {
+        display: none;
+    }
+
+    .footer-brand {
+        display: block;
+    }
+}
