@@ -931,11 +931,12 @@ body {
 
     /* Typography */
     .title-glitch {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .line2 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
+        margin-top: 5px;
     }
 
     .subtitle {
@@ -944,7 +945,7 @@ body {
     }
 
     .section-title {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
     }
 
     /* Grids & Layouts */
@@ -1070,11 +1071,15 @@ body {
     }
 
     .title-glitch {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .line2 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
     }
 
     .btn-primary {

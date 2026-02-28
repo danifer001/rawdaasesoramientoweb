@@ -1,0 +1,26 @@
+# Raw DA - Asesoramiento Web
+
+## Sobre Nosotros
+**Raw DA** es un servicio de asesoramiento y diseño web enfocado en la mejora de Experiencia de Usuario (UX) liderado por **Daniela Ferraris**. Ofrecemos soluciones directas, honestidad total sin filtros, con datos y resultados medibles.
+
+## Servicios Principales
+- **Auditoría UX ($499)**: Te decimos exactamente qué falla en tu web.
+- **Optimización ($799)**: Mejoramos lo que existe. No hacemos rediseños sin sentido, solo optimizaciones reales basadas en datos.
+- **Entrenamiento ($299/persona)**: Capacita a tu equipo interno en UX real y no en simples teorías.
+
+## El Método
+Nuestro proceso es transparente y medible:
+1. **Diagnóstico**: Analizamos tu web con más de 20 herramientas en un plazo de 48 horas.
+2. **Reporte**: Generamos informes con datos duros, capturas (screenshots) y métricas.
+3. **Solución**: Armamos un plan de acción priorizado por Retorno de Inversión (ROI).
+
+## Contacto & Enlaces Oficiales
+- **Sitio Web Principal**: (Aquí irá el dominio final)
+- **Email**: raw.consultas@gmail.com
+- **WhatsApp**: +54 9 236 456-0352
+- **LinkedIn**: [Daniela Ferraris](https://www.linkedin.com/in/daniela-ferraris-7738313b3/)
+- **X / Twitter**: [@rawDA_Asesora](https://x.com/rawDA_Asesora)
+- **GitHub**: [danifer001/rawdaasesoramientoweb](https://github.com/danifer001/rawdaasesoramientoweb)
+
+## Información Técnica del Sitio
+Este sitio utiliza HTML, CSS nativo y JavaScript vainilla; no utiliza frameworks pesados, garantizando tiempos de carga muy rápidos. Las comunicaciones de formularios y diagnósticos son procesadas internamente mediante webhooks y `n8n`.
