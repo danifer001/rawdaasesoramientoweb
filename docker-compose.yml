@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  nginx-proxy-manager:
+    image: 'jc21/nginx-proxy-manager:latest'
+    container_name: nginx-proxy-manager
+    restart: unless-stopped
+    ports:
+      # Public HTTP Port
+      - '80:80'
+      # Public HTTPS Port
+      - '443:443'
+      # Admin Web Port
+      - '81:81'
+    volumes:
+      - ./npm/data:/data
+      - ./npm/letsencrypt:/etc/letsencrypt
+    networks:
+      - proxy-network
+
+  n8n:
+    image: docker.n8n.io/n8nio/n8n
+    container_name: n8n
+    restart: always
+    environment:
+      - N8N_HOST=n8n.tudominio.com # Cambia esto a tu dominio real más adelante
+      - N8N_PROTOCOL=https
+      - NODE_ENV=production
+      - WEBHOOK_URL=https://n8n.tudominio.com/ # Cambia esto a tu dominio real 
+      - GENERIC_TIMEZONE=America/Argentina/Buenos_Aires # Ajusta a tu zona horaria
+    volumes:
+      - n8n_data:/home/node/.n8n
+    networks:
+      - proxy-network
+    # No exponemos el puerto 5678 al exterior para mayor seguridad.
+    # Nginx Proxy Manager se comunicará de forma interna con este contenedor.
+    # ports:
+    #   - "127.0.0.1:5678:5678"
+
+volumes:
+  n8n_data:
+
+networks:
+  proxy-network:
+    name: proxy-network
+    driver: bridge
