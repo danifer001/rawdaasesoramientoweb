@@ -125,9 +125,9 @@ function initForm() {
 
         try {
             // Usar la URL del atributo action del formulario (ngrok o la que corresponda)
-             const response = await fetch('https://greaved-laboredly-raegan.ngrok-free.dev/webhook/contacto-raw', {
+             const response = await fetch('https://n8n.rawdaasesoramientoweb.net.ar/webhook/contacto-raw', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'ngrok-skip-browser-warning': 'true'},
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(datos)
             });
 
