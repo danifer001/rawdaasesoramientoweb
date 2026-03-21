@@ -636,7 +636,7 @@ body {
 .whatsapp-float {
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    left: 30px;
     background: #25D366;
     color: white;
     padding: 15px 25px;
@@ -1059,7 +1059,8 @@ body {
     /* WhatsApp button */
     .whatsapp-float {
         bottom: 20px;
-        right: 20px;
+        left: 20px;
+        right: auto;
         padding: 10px 15px;
         font-size: 1rem;
     }
