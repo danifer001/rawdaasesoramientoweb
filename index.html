@@ -259,6 +259,16 @@
 
     <script src="js/main.js"></script>
 
+    <!-- n8n Chatbot -->
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+    <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+        createChat({
+            webhookUrl: 'https://n8n.rawdaasesoramientoweb.net.ar/webhook/25f4cf8b-4bf4-4d5f-9ab1-3f22061b32b8/chat'
+        });
+    </script>
+
 </body>
 
 </html>
