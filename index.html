@@ -265,7 +265,16 @@
         import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
         createChat({
-            webhookUrl: 'https://n8n.rawdaasesoramientoweb.net.ar/webhook/25f4cf8b-4bf4-4d5f-9ab1-3f22061b32b8/chat'
+            webhookUrl: 'https://n8n.rawdaasesoramientoweb.net.ar/webhook/25f4cf8b-4bf4-4d5f-9ab1-3f22061b32b8/chat',
+            i18n: {
+                en: {
+                    title: 'Asistente rawDA',
+                    subtitle: 'Escribe tu duda y te guiaré.',
+                    footer: '',
+                    getStarted: 'Nueva conversación',
+                    inputPlaceholder: 'Escribe tu mensaje...',
+                }
+            }
         });
     </script>
 
