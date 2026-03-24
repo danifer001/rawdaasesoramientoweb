@@ -636,19 +636,20 @@ body {
 .whatsapp-float {
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    left: 30px;
     background: #25D366;
     color: white;
-    padding: 15px 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
     border: 3px solid var(--black);
     text-decoration: none;
-    font-family: var(--font-term);
-    font-size: 1.2rem;
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
     z-index: 1000;
     transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .whatsapp-float:hover {
@@ -656,7 +657,10 @@ body {
 }
 
 .whatsapp-icon {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -1059,9 +1063,9 @@ body {
     /* WhatsApp button */
     .whatsapp-float {
         bottom: 20px;
-        right: 20px;
-        padding: 10px 15px;
-        font-size: 1rem;
+        left: 20px;
+        width: 50px;
+        height: 50px;
     }
 }
 

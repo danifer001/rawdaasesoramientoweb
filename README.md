@@ -43,13 +43,13 @@ Landing page que comunica servicios de asesoramiento web con total honestidad, s
 
 - WhatsApp: +54 9 2364560352
 - Email: danielaferraris5@gmail.com
-- Web: [raw-ux.com](https://raw-ux.com)
+- Web: [www.rawdaasesoramientoweb.net.ar](https://www.rawdaasesoramientoweb.net.ar)
 
 ## 🔧 Instalación
 
 ```bash
 # Clonar repositorio
-git clone https://github.com/tu-usuario/raw-ux.git
+git clone https://github.com/danifer001/rawdaasesoramientoweb.git
 
 # Entrar al directorio
 cd raw-ux
