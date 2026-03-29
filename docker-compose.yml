@@ -29,16 +29,18 @@ services:
       - WEBHOOK_URL=https://n8n.tudominio.com/ # Cambia esto a tu dominio real 
       - GENERIC_TIMEZONE=America/Argentina/Buenos_Aires # Ajusta a tu zona horaria
     volumes:
-      - n8n_data:/home/node/.n8n
+      - n8n-npm_n8n_data:/home/node/.n8n
     networks:
       - proxy-network
     # No exponemos el puerto 5678 al exterior para mayor seguridad.
     # Nginx Proxy Manager se comunicará de forma interna con este contenedor.
     # ports:
     #   - "127.0.0.1:5678:5678"
+    restart: always
 
 volumes:
-  n8n_data:
+  n8n-npm_n8n_data:
+    external: true
 
 networks:
   proxy-network:
